@@ -229,6 +229,40 @@ input,select,textarea{background-color:rgba(255,255,255,.5)}html[data-dk="1"] in
 @keyframes spBar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes spSpin{to{transform:rotate(360deg)}}
 .emb:has(>img){border-radius:50%;background:#fff;padding:2px;overflow:hidden}.emb>img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+</style><style>/* ===== GSX ===== */
+.gx label{display:block;font-size:12.5px;font-weight:600;color:var(--m);margin:0 0 6px}
+.gx-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.gx-f{margin:12px 0}.gx-f input{margin-bottom:8px}
+.gx-hint{margin:10px 0 0;padding:9px 13px;border-radius:10px;background:var(--gbg);color:var(--gbt);font-size:13px;line-height:1.7}
+.gx-chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.gx-chips button{border:1px solid var(--b2);background:var(--soft);color:var(--pt);border-radius:20px;padding:4px 12px;font:600 12px var(--f);cursor:pointer;transition:background .2s}
+.gx-chips button:hover{background:var(--hov)}
+.gx-rc{display:grid;grid-template-columns:1.3fr 1fr;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--b);border-radius:var(--rs);background:var(--soft);margin-bottom:8px}
+.gx-rc label.gx-ck{display:flex;gap:9px;align-items:center;margin:0;cursor:pointer;font-size:14px;color:var(--t)}
+.gx-rc input[type=checkbox]{width:18px;height:18px;flex:none;accent-color:var(--p2)}
+.gx-rc select{height:40px}
+.gx-w{color:var(--o)}
+.gx-pv{margin-top:12px}.gx-pv b{display:block;font-size:12.5px;color:var(--m);margin-bottom:6px}
+.gx-pv pre,.gx-pre{margin:0;white-space:pre-wrap;word-wrap:break-word;font:14px/1.9 var(--f);padding:12px 14px;border-radius:var(--rs);background:var(--soft);border:1px solid var(--b);border-right:4px solid #25d366}
+.gx-num{padding:12px 14px;border-radius:var(--rs);background:var(--rbg);color:var(--r);font-size:14px;margin-bottom:14px}.gx-num p{margin:6px 0 0;color:var(--t)}
+.gx-steps{display:flex;gap:8px;overflow:auto;padding-bottom:10px;margin-bottom:12px}
+.gx-st{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--b2);background:var(--card);color:var(--m);border-radius:20px;padding:5px 12px 5px 8px;font:600 12.5px var(--f);cursor:pointer;white-space:nowrap}
+.gx-st i{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--soft);font-style:normal;font-size:12px}
+.gx-st.on{border-color:var(--p2);color:var(--pt);box-shadow:0 0 0 3px color-mix(in srgb,var(--p2) 14%,transparent)}
+.gx-st.ok i{background:var(--ok);color:#fff}
+.gx-to{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.gx-to b{font-size:16px}.gx-role{margin-inline-start:8px;padding:2px 10px;border-radius:12px;background:var(--soft);border:1px solid var(--b);font-size:12px;color:var(--m)}
+.gx-to small{color:var(--m)}
+#gxqt{line-height:1.9;font-size:14px}
+.gx-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.gx-act .btn:first-child{flex:1;min-width:170px;background:#25d366;color:#052e16}
+.gx-done{display:flex;flex-direction:column;align-items:center;gap:14px;padding:26px 10px;text-align:center}
+.gx-wc{padding:13px 15px;border-radius:var(--rs);background:var(--soft);border:1px solid var(--b);border-right:4px solid var(--r);margin-bottom:10px}
+.gx-wh{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.gx-wh b{color:var(--r)}.gx-d{margin-inline-start:auto;color:var(--m);font-size:12.5px}
+.gx-wm{font-size:13px;color:var(--m);margin-top:4px}
+.gx-wc p{margin:8px 0;line-height:1.8;white-space:pre-wrap}
+.gx-ws{display:flex;gap:6px;flex-wrap:wrap}.gx-wa{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.gx-wa .btn{height:36px;font-size:13px}
+.qb.warn i{color:var(--r);background:var(--rbg)}
+@media(max-width:560px){.gx-row,.gx-rc{grid-template-columns:1fr}}
 </style></head><body>
 <div id="appSplash" role="status" aria-label="جارٍ التحميل"><div class="aspl"><i class="aspr"></i><img data-l alt=""></div><h1>بوابة المشرف</h1><p>إدارة الدراسات العليا</p><div class="aspb"><i></i></div></div>
 <script>(function(){var s=document.getElementById('appSplash'),t=Date.now(),d=0;function h(){if(d||!s)return;d=1;s.classList.add('out');setTimeout(function(){s.remove()},700)}function g(){setTimeout(h,Math.max(0,1500-(Date.now()-t)))}if(document.readyState=='complete')g();else addEventListener('load',g);setTimeout(h,5000)})()</script>
@@ -245,7 +279,7 @@ input,select,textarea{background-color:rgba(255,255,255,.5)}html[data-dk="1"] in
 <script>window.FBREADY=new Promise(function(r){window.__fbr=r});</script>
 <script type="module">
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.3.0/firebase-app.js';
-import {getDatabase,ref,get,update,push,query,orderByChild,equalTo,serverTimestamp,goOnline,goOffline,onValue} from 'https://www.gstatic.com/firebasejs/13.3.0/firebase-database.js';
+import {getDatabase,ref,get,update,push,query,orderByChild,equalTo,serverTimestamp,goOnline,goOffline,onValue,runTransaction} from 'https://www.gstatic.com/firebasejs/13.3.0/firebase-database.js';
 import {getAuth,setPersistence,browserLocalPersistence,browserSessionPersistence,signInWithEmailAndPassword,signOut,onAuthStateChanged,EmailAuthProvider,reauthenticateWithCredential,updatePassword} from 'https://www.gstatic.com/firebasejs/13.3.0/firebase-auth.js';
 
 /* ===== إعدادات المشروع (يجب أن تطابق index.html) ===== */
@@ -256,7 +290,7 @@ const app=initializeApp(CFG,'gs-sup'),db=getDatabase(app),auth=getAuth(app);
 goOffline(db); /* لا اتصال مفتوح إلا أثناء العمليات (حد 100 اتصال متزامن في الخطة المجانية) */
 let OFF=0;onValue(ref(db,'.info/serverTimeOffset'),s=>{OFF=+s.val()||0});
 
-const PERMS=['log','print','committee','req_extend','req_suspend','req_plan','req_committee','req_defense','req_sup'],REQ_TYPES=['extend','suspend','plan','committee','defense','sup'],LOG_TYPES=['note','meeting','task','report'];
+const PERMS=['log','print','committee','req_extend','req_suspend','req_plan','req_committee','req_defense','req_sup','warn'],REQ_TYPES=['extend','suspend','plan','committee','defense','sup'],LOG_TYPES=['note','meeting','task','report'];
 const PUBK=['name','job','nationality','dept','specialty','degree','status','phone','enrollDate','enrollEnd','regDate','coursesDate','committeeDate','defenseDate','titleAr','titleEn','created'];
 const NET='تعذّر الاتصال بالخادم — تحقق من الإنترنت',BAD='الرقم القومي أو كلمة السر غير صحيحة';
 const mkErr=m=>{const e=new Error(m);e.app=1;return e};
@@ -304,7 +338,7 @@ async function supAll(){const u=auth.currentUser;if(!u)throw mkErr('انتهت �
   const sid=(await get(ref(db,'uids/'+u.uid))).val();if(!sid){await signOut(auth);throw mkErr('بيانات الدخول غير صحيحة — هذا الحساب لم يعد مرتبطاً بمشرف')}
   const me=(await get(ref(db,'supervisors/'+sid))).val();if(!me){await signOut(auth);throw mkErr('بيانات الدخول غير صحيحة')}
   if(me.active!==true)throw mkErr('تم إيقاف حسابك — تواصل مع إدارة الدراسات العليا');
-  const[links,pub,rq]=await Promise.all([get(ref(db,'sup_researchers/'+sid)),get(ref(db,'public/settings')),get(query(ref(db,'requests'),orderByChild('sid'),equalTo(sid)))]);
+  const[links,pub,tp,rq]=await Promise.all([get(ref(db,'sup_researchers/'+sid)),get(ref(db,'public/settings')),get(ref(db,'public/templates')),get(query(ref(db,'requests'),orderByChild('sid'),equalTo(sid)))]);
   const st=pub.val()||{},perms={};PERMS.forEach(k=>perms[k]=st['pm_'+k]!==false);
   const ids=Object.keys(links.val()||{});
   const[pubs,coms,logs]=await Promise.all([Promise.all(ids.map(id=>get(ref(db,'researchers_pub/'+id)))),perms.committee?Promise.all(ids.map(id=>get(ref(db,'researchers_com/'+id)).catch(()=>null))):Promise.resolve([]),Promise.all(ids.map(id=>get(query(ref(db,'logs/'+id),orderByChild('sid'),equalTo(sid)))))]);
@@ -314,8 +348,8 @@ async function supAll(){const u=auth.currentUser;if(!u)throw mkErr('انتهت �
   const requests=[];rq.forEach(c=>{const v=c.val();requests.push({id:c.key,rid:v.rid,sid:v.sid,type:v.type,date:v.date||'',data:v.data||'{}',status:v.status||'pending',adminNote:v.adminNote||'',created:v.created||'',decided:v.decided||''})});
   CUR={sid,nid:me.nid||'',perms,rids:rset,logs:lmap};
   const T=cairo();if(String(me.lastLogin||'').slice(0,10)!==T.d)await update(ref(db),{['supervisors/'+sid+'/lastLogin']:T.t}).catch(()=>{});
-  const pubS={};['faculty','univ','alertDays','vd','dean','vp'].forEach(k=>pubS[k]=st[k]==null?'':String(st[k]));
-  return{sup:{id:sid,name:me.name||'',job:me.job||'',phone:me.phone||''},settings:pubS,perms,researchers,logs:lg,requests}}))}
+  const pubS={};['faculty','univ','alertDays','vd','vdPhone','dean','vp'].forEach(k=>pubS[k]=st[k]==null?'':String(st[k]));if(!pubS.vd)pubS.vd='أ.د/ هناء فؤاد';const tpls=[];tp.forEach(c=>{const v=c.val()||{};tpls.push({id:c.key,k:v.k,to:v.to,t:v.t,b:v.b,o:+v.o||0})});tpls.sort((a,b)=>a.o-b.o);
+  return{sup:{id:sid,name:me.name||'',job:me.job||'',phone:me.phone||''},settings:pubS,perms,researchers,logs:lg,requests,tpls}}))}
 
 /* ===== السجلات ===== */
 async function supLog(b){need();const w=b.row||{};
@@ -355,6 +389,19 @@ async function supChPin(b){need();const u=auth.currentUser,n=String(b.np==null?'
  try{await reauthenticateWithCredential(u,EmailAuthProvider.credential(u.email,cleanCode(b.cp)));await updatePassword(u,n)}
  catch(e){if(/wrong-password|invalid-credential/.test(String(e&&e.code)))throw mkErr('كلمة السر الحالية غير صحيحة');if(/weak-password/.test(String(e&&e.code)))throw mkErr('كلمة السر ضعيفة');throw e}return{}}
 
+/* ===== الإنذارات ===== */
+const wnRow=(rid,id,v)=>({id,rid,sid:v.sid||'',no:+v.no||0,yr:+v.yr||0,date:v.date||'',reason:v.reason||'',ord:+v.ord||1,x:v.x||'',sent:v.sent||{},created:v.created||''});
+async function supWarns(b){need();const rid=String(b.rid||'');if(!CUR.rids.has(rid))throw mkErr('هذا الباحث ليس ضمن باحثيك');
+ return online(async()=>{const s=await get(ref(db,'warnings/'+rid)),o=[];s.forEach(c=>{o.push(wnRow(rid,c.key,c.val()||{}))});o.sort((a,b)=>String(b.date).localeCompare(String(a.date))||b.no-a.no);return{warnings:o}})}
+async function supWarn(b){need();if(!CUR.perms.warn)throw mkErr('توجيه الإنذارات غير متاح حالياً');const rid=String(b.rid||'');if(!CUR.rids.has(rid))throw mkErr('هذا الباحث ليس ضمن باحثيك');
+ const reason=String(b.reason||'').trim().slice(0,1000),date=String(b.date||'').slice(0,10);if(!reason)throw mkErr('اكتب سبب الإنذار');if(!/^\d{4}-\d{2}-\d{2}$/.test(date))throw mkErr('تاريخ غير صالح');
+ return online(async()=>{const prior=await get(ref(db,'warnings/'+rid)),yr=+date.slice(0,4),cs=ref(db,'counters/warn/'+yr);await get(cs).catch(()=>{});
+  const r=await runTransaction(cs,c=>(c||0)+1);if(!r.committed)throw mkErr('تعذّر توليد رقم الإنذار — حاول مرة أخرى');
+  const no=r.snapshot.val(),id=nk(),rec={sid:CUR.sid,no,yr,date,reason,ord:prior.numChildren()+1,x:JSON.stringify(b.x||{}).slice(0,800),created:cairo().t};
+  await update(ref(db),{['warnings/'+rid+'/'+id]:rec,['activity/'+nk()]:{rid,sid:CUR.sid,kind:'warn',t:sv()}});return{w:wnRow(rid,id,rec)}})}
+async function supWarnSent(b){need();const rid=String(b.rid||'');if(!CUR.rids.has(rid))throw mkErr('غير مسموح');const k=({r:'r',v:'v'})[b.k];if(!k)return{};
+ return online(async()=>{await update(ref(db),{['warnings/'+rid+'/'+b.id+'/sent/'+k]:cairo().t});return{}})}
+
 async function call(a,d={}){const t0=Date.now();try{let r;
  switch(a){
   case'sup_login':r=await login(d);break;
@@ -364,7 +411,10 @@ async function call(a,d={}){const t0=Date.now();try{let r;
   case'sup_req':r=await supReq(d);break;
   case'sup_reqdel':r=await supReqDel(d);break;
   case'sup_chpin':r=await supChPin(d);break;
-  default:throw mkErr('أمر غير معروف')}
+    case'sup_warns':r=await supWarns(d);break;
+   case'sup_warn':r=await supWarn(d);break;
+   case'sup_warnsent':r=await supWarnSent(d);break;
+   default:throw mkErr('أمر غير معروف')}
  r.ok=1;r.now=Math.round((t0+Date.now())/2+OFF);return r}catch(e){throw fe(e)}}
 window.FB={call,resume,logout,_db:db};
 window.__fbr&&window.__fbr();
@@ -389,8 +439,8 @@ const today=()=>{const t=nowC();t.setHours(0,0,0,0);return t};
 let NID='',CODE='',PM={},RQ=[],ME=null,S={},R=[],L=[],EV=[],NB=0,STO=null,LASTF=0;
 const FBLOAD=()=>Promise.race([window.FBREADY,new Promise((_,rej)=>setTimeout(()=>rej(new Error('تعذّر تحميل مكتبة Firebase — تحقق من الاتصال بالإنترنت')),15000))]);
 async function api(a,d={},btn){if(btn)btn.classList.add('ld');NB++;document.body.classList.add('busy');try{await FBLOAD();const t0=Date.now(),j=await window.FB.call(a,d);if(j.now)CLK=j.now-(t0+Date.now())/2;return j}finally{if(btn)btn.classList.remove('ld');if(!--NB)document.body.classList.remove('busy')}}
-function apply(j,keep){const _o={};RQ.forEach(q=>_o[q.id]=q.status);ME=j.sup;S=j.settings||{};PM=j.perms||{};RQ=(j.requests||[]).map(q=>({...q,data:JO(q.data)}));RQ.forEach(q=>{if(_o[q.id]==='pending'&&q.status!=='pending')setTimeout(()=>toast('تم الرد على طلبك «'+((RQT[q.type]||{}).t||q.type)+'»: '+(q.status==='approved'?'تمت الموافقة':'مرفوض')),400)});R=(j.researchers||[]).map(r=>({...r,supervisors:Array.isArray(r.supervisors)?r.supervisors:[],committee:Array.isArray(r.committee)?r.committee:[]}));L=(j.logs||[]).map(l=>({...l,data:JO(l.data)}));compute();if(!keep)try{STO&&STO.setItem('sv_cache',JSON.stringify(j))}catch(e){}}
-function cacheSave(){try{STO&&STO.setItem('sv_cache',JSON.stringify({sup:ME,settings:S,perms:PM,requests:RQ,researchers:R,logs:L}))}catch(e){}}
+function apply(j,keep){const _o={};RQ.forEach(q=>_o[q.id]=q.status);ME=j.sup;S=j.settings||{};TPLS=j.tpls||[];window.GSX&&GSX.setTpls(TPLS);PM=j.perms||{};RQ=(j.requests||[]).map(q=>({...q,data:JO(q.data)}));RQ.forEach(q=>{if(_o[q.id]==='pending'&&q.status!=='pending')setTimeout(()=>toast('تم الرد على طلبك «'+((RQT[q.type]||{}).t||q.type)+'»: '+(q.status==='approved'?'تمت الموافقة':'مرفوض')),400)});R=(j.researchers||[]).map(r=>({...r,supervisors:Array.isArray(r.supervisors)?r.supervisors:[],committee:Array.isArray(r.committee)?r.committee:[]}));L=(j.logs||[]).map(l=>({...l,data:JO(l.data)}));compute();if(!keep)try{STO&&STO.setItem('sv_cache',JSON.stringify(j))}catch(e){}}
+function cacheSave(){try{STO&&STO.setItem('sv_cache',JSON.stringify({sup:ME,settings:S,perms:PM,requests:RQ,researchers:R,logs:L,tpls:TPLS}))}catch(e){}}
 async function login(){const n=toEn($('#nid').value),c=$('#cd').value.trim(),G=$('#lg');G.classList.remove('er');$('#le').textContent='';if(n.length!=14||c.length<6){void G.offsetWidth;G.classList.add('er');return $('#le').textContent=n.length!=14?'الرقم القومي يجب أن يكون 14 رقماً':'أدخل كلمة السر (6 خانات على الأقل)'}NID=n;CODE=c;
 try{const rm=$('#rm').checked,j=await api('sup_login',{nid:n,code:c,remember:rm},$('#lb'));STO=rm?localStorage:sessionStorage;['sv_cache'].forEach(k=>{localStorage.removeItem(k);sessionStorage.removeItem(k)});apply(j);enter()}catch(e){NID=CODE='';void G.offsetWidth;G.classList.add('er');$('#le').textContent=e.message=='Failed to fetch'?'تعذّر الاتصال بالخادم — تحقق من الإنترنت':e.message}}
 function enter(){$('#lg').classList.add('out');setTimeout(()=>$('#lg').hidden=true,600);$('#app').hidden=false;shell();route();setInterval(()=>{if(!document.hidden)route(1)},6e4);notif()}
@@ -475,9 +525,9 @@ const e=enr(r),ev=evOf(id),ls=L.filter(l=>l.rid==id&&(DF=='all'||l.type==DF)).so
 kv=(t,v)=>`<div><small>${t}</small><b>${v||'—'}</b></div>`;
 return `<button class=bk onclick="history.length>1?history.back():go('#/res')">${ic('back')}رجوع</button>
 <section class=dh><div class="rg ${e?e.c:'g'}" style="--pc:${e?e.p:100}"><span class=av>${ini(r.name)}</span></div><div class=di><h2>${esc(r.name)}</h2><p>${esc(r.job||'')}</p><div class=rtg><span class=chip>${esc(r.status)}</span>${r.degree?`<span class=tg>${esc(r.degree)}</span>`:''}${r.dept?`<span class=tg>${esc(r.dept)}</span>`:''}${r.specialty?`<span class=tg>${esc(r.specialty)}</span>`:''}</div></div><div style="display:flex;gap:8px;flex-wrap:wrap">${r.phone?`<a class="btn gl" href="tel:${esc(r.phone)}">${ic('phone')}اتصال</a><a class="btn gl" href="${wa(r.phone)}" target=_blank rel=noopener>${ic('wa')}واتساب</a>`:''}</div></section>
-<div class=qa>${['note','meeting','task','report'].filter(t=>can(t=='report'?'report':'log')).map(t=>`<button class="qb ${t}" onclick="cmp('${esc(id)}','${t}')"><i>${ic(TY[t][1])}</i>${t=='note'?'ملاحظة':t=='meeting'?'تسجيل اجتماع':t=='task'?'مهمة متابعة':'تقرير دوري'}</button>`).join('')}${rqAny()?`<button class="qb req" onclick="rqPick('${esc(id)}')"><i>${ic('req')}</i>طلب للإدارة</button>`:''}</div>
+<div class=qa>${['note','meeting','task','report'].filter(t=>can(t=='report'?'report':'log')).map(t=>`<button class="qb ${t}" onclick="cmp('${esc(id)}','${t}')"><i>${ic(TY[t][1])}</i>${t=='note'?'ملاحظة':t=='meeting'?'تسجيل اجتماع':t=='task'?'مهمة متابعة':'تقرير دوري'}</button>`).join('')}${rqAny()?`<button class="qb req" onclick="rqPick('${esc(id)}')"><i>${ic('req')}</i>طلب للإدارة</button>`:''}${can('warn')?`<button class="qb warn" onclick="warnOpen('${esc(id)}')"><i>${ic('warn')}</i>توجيه إنذار</button>`:''}</div>
 <div class=dg><div><div class=cd><div class=ch3>${ic('log')}سجل المتابعة${can('print')?`<a href="#" onclick="event.preventDefault();plog('${esc(id)}')">طباعة السجل</a>`:''}</div><div class=pl>${[['all','الكل'],['note','ملاحظات'],['meeting','اجتماعات'],['task','مهام'],['report','تقارير']].map(f=>`<button class="${DF==f[0]?'on':''}" onclick="DF='${f[0]}';route()">${f[1]}</button>`).join('')}</div>${ls.length?`<div class=tl>${ls.map(l=>lItem(l)).join('')}</div>`:`<div class=em>${ic('note')}لا يوجد سجل بعد — سجّل أول ملاحظة أو اجتماع</div>`}</div></div>
-<div>${ready(r)}<div class=cd><div class=ch3>${ic('check')}مراحل الباحث</div>${stepper(r)}</div>
+<div>${ready(r)}${can('warn')?warnCard(id):''}<div class=cd><div class=ch3>${ic('check')}مراحل الباحث</div>${stepper(r)}</div>
 <div class=cd><div class=ch3>${ic('cal')}المواعيد القادمة</div>${ev.length?ev.slice(0,6).map(x=>`<div class="al ${cls(x.k)}" style="cursor:default"><div><b>${esc(x.t.split('(')[0])}</b><small>${fd(x.d)}</small></div><span>${lbl(x.k)}</span></div>`).join(''):`<div class=em>لا مواعيد</div>`}</div>
 <div class=cd><div class=ch3>${ic('user')}بيانات القيد</div><div class=kv>${kv('تاريخ القيد',fd(r.enrollDate))+kv('انتهاء القيد',fd(r.enrollEnd))+kv('تسجيل الرسالة',fd(r.regDate))+kv('اجتياز المقررات',fd(r.coursesDate))+kv('اعتماد اللجنة',fd(r.committeeDate))+kv('المناقشة',fd(r.defenseDate))}</div></div>
 ${r.titleAr||r.titleEn?`<div class=cd><div class=ch3>${ic('report')}عنوان الرسالة</div>${r.titleAr?`<p class=rth style="-webkit-line-clamp:unset;margin:0 0 10px">${esc(r.titleAr)}</p>`:''}${r.titleEn?`<p class=rth style="-webkit-line-clamp:unset;margin:0;direction:ltr;text-align:left;border-right:0;border-left:3px solid var(--g2);padding:0 0 0 10px">${esc(r.titleEn)}</p>`:''}</div>`:''}
@@ -561,7 +611,7 @@ function plist(){const l=fl().length?fl():R,rows=l.map((r,i)=>{const e=enr(r),n=
 preview('كشف الباحثين','إجمالي '+l.length+' باحث',dwrap(`<div class=bx><div class=m1>كشف الباحثين تحت الإشراف</div><div class=m3>${esc(ME.name)}</div></div><table><tr><th>م</th><th>الباحث</th><th>الدرجة</th><th>القسم</th><th>الحالة</th><th>انتهاء القيد</th><th>أقرب موعد</th></tr>${rows}</table>`))}
 /* ===== الصلاحيات والطلبات والذكاء ===== */
 const toEn=s=>String(s||'').replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/\D/g,'');
-const PL={phone:'رؤية هاتف الباحث والتواصل',committee:'رؤية لجنة الحكم',log:'الملاحظات والاجتماعات والمهام',report:'التقارير الدورية',print:'الطباعة',req_extend:'طلب مد القيد',req_suspend:'طلب إيقاف القيد',req_plan:'طلب تعديل العنوان/الخطة',req_committee:'ترشيح لجنة الحكم',req_defense:'طلب موعد المناقشة',req_sup:'طلب إضافة/تغيير مشرف'};
+const PL={phone:'رؤية هاتف الباحث والتواصل',committee:'رؤية لجنة الحكم',log:'الملاحظات والاجتماعات والمهام',report:'التقارير الدورية',print:'الطباعة',req_extend:'طلب مد القيد',req_suspend:'طلب إيقاف القيد',req_plan:'طلب تعديل العنوان/الخطة',req_committee:'ترشيح لجنة الحكم',req_defense:'طلب موعد المناقشة',req_sup:'طلب إضافة/تغيير مشرف',warn:'توجيه إنذار للباحث'};
 const can=p=>!!PM[p];
 const RQT={extend:{t:'مد القيد',p:'req_extend',f:[['len','مدة المد المطلوبة','s',['فصل دراسي واحد','فصلان دراسيان','سنة كاملة']],['why','المبررات','t']]},
 suspend:{t:'إيقاف القيد',p:'req_suspend',f:[['len','المدة المطلوب وقفها','i'],['why','مبررات الإيقاف','t']]},
@@ -623,4 +673,124 @@ try{const c=JSON.parse(STO.sv_cache||'null');if(c&&c.sup){apply(c,1);$('#lg').hi
 if(!ME){$('#lg').hidden=true;$('#app').hidden=false;$('#v').innerHTML=skel()}
 try{const j=await api('sup_all');apply(j);LASTF=Date.now();if(!$('#sn').children.length){shell()}else{$('#mnm').textContent=ME.name}route();setInterval(()=>{if(!document.hidden)route(1)},6e4);notif()}
 catch(e){if(/غير صحيحة|إيقاف حسابك/.test(e.message)){out()}else if(ME)toast('تعمل ببيانات محفوظة — لا يوجد اتصال');else{$('#v').innerHTML=`<div class=em>${ic('warn')}تعذّر الاتصال بالخادم<button class=btn onclick="location.reload()">إعادة المحاولة</button></div>`}}})();
-</script></body></html>
+</script><script>
+/* ===== GSX — محرك النماذج والرسائل (إنذارات + تذكيرات + واتساب) مشترك بين الإدارة والمشرفين ===== */
+(function(){
+'use strict';
+const q=s=>document.querySelector(s),E=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fdt=s=>s?String(s).slice(0,10).split('-').reverse().join('/'):'';
+const icn=n=>typeof window.ic==='function'?window.ic(n):'';
+const G=window.GSX={host:null,_t:null};
+
+/* ---------- المتغيّرات المعروفة ---------- */
+const TOK={
+ g:[['الباحث','اسم الباحث'],['الدرجة','الدرجة العلمية'],['القسم','القسم'],['التخصص','التخصص'],['المشرف','اسم المشرف'],['المشرفون','كل مشرفي الباحث'],['وكيل_الكلية','وكيل الكلية'],['الكلية','اسم الكلية'],['الجامعة','اسم الجامعة'],['اليوم','تاريخ اليوم']],
+ w:[['رقم_الإنذار','رقم الإنذار (5/2026)'],['تاريخ_الإنذار','تاريخ الإنذار'],['سبب_الإنذار','سبب الإنذار'],['ترتيب_الإنذار','الإنذار الثاني…'],['مصدر_الإنذار','من وجّه الإنذار']],
+ r:[['قائمة_المواعيد','كل المواعيد'],['الموعد','أول موعد'],['تاريخ_الموعد','تاريخه'],['المتبقي','المدة المتبقية'],['عدد_المواعيد','العدد']]};
+const KN=new Set([].concat(TOK.g,TOK.w,TOK.r).map(x=>x[0]));
+G.TOK=TOK;
+const nm=n=>String(n).trim().replace(/\s+/g,'_');
+
+/* ---------- النماذج الافتراضية ---------- */
+const DEF=[
+{id:'d_wr',k:'warn',to:'r',t:'إنذار للباحث — رسمي',b:'السلام عليكم ورحمة الله وبركاته\nالباحث/ة: {الباحث}\nالدرجة: {الدرجة} — القسم: {القسم}\n\n⚠️ إنذار رقم ({رقم_الإنذار}) بتاريخ {تاريخ_الإنذار}\n({ترتيب_الإنذار})\n\nالسبب: {سبب_الإنذار}\n\nيُرجى سرعة التواصل مع المشرف وتدارك الموقف في أقرب وقت، وإلا سيُتخذ الإجراء اللائحي المناسب.\n\n{الكلية} — {الجامعة}'},
+{id:'d_wr2',k:'warn',to:'r',t:'إنذار للباحث — بمهلة محددة',b:'السلام عليكم ورحمة الله وبركاته\nالباحث/ة: {الباحث}\n\n⚠️ إنذار رقم ({رقم_الإنذار}) بتاريخ {تاريخ_الإنذار}\nالسبب: {سبب_الإنذار}\n\nأمامك مهلة {المهلة_بالأيام} يوماً من تاريخ هذا الإنذار لاستكمال المطلوب.\n\n{الكلية} — {الجامعة}'},
+{id:'d_wv',k:'warn',to:'v',t:'إخطار وكيل الكلية بإنذار',b:'سيادة {وكيل_الكلية}\nوكيل الكلية للدراسات العليا\nتحية طيبة وبعد،\n\nنفيد سيادتكم بأن {مصدر_الإنذار} وجّه إنذاراً للباحث/ة: {الباحث} ({الدرجة} — {القسم}):\n• رقم الإنذار: {رقم_الإنذار}\n• التاريخ: {تاريخ_الإنذار} ({ترتيب_الإنذار})\n• السبب: {سبب_الإنذار}\n\nوتفضلوا بقبول فائق الاحترام.'},
+{id:'d_rr',k:'remind',to:'r',t:'تذكير للباحث بالمواعيد',b:'السلام عليكم ورحمة الله وبركاته\nالباحث/ة: {الباحث}\n\n🔔 تذكير من إدارة الدراسات العليا — كلية {الكلية}:\n{قائمة_المواعيد}\n\nبرجاء المبادرة بالإجراءات اللازمة قبل انتهاء الموعد. شاكرين تعاونكم.'},
+{id:'d_rs',k:'remind',to:'s',t:'تذكير للمشرف بمواعيد باحثيه',b:'السلام عليكم ورحمة الله وبركاته\nسيادة {المشرف}\n\n🔔 تذكير من إدارة الدراسات العليا — كلية {الكلية}:\nمواعيد الباحثين التالين قاربت على الانتهاء:\n{قائمة_المواعيد}\n\nبرجاء متابعة الباحثين ومساعدتهم على استيفاء المطلوب في الوقت المناسب. شاكرين تعاونكم.'},
+{id:'d_rv',k:'remind',to:'v',t:'ملخص المواعيد لوكيل الكلية',b:'سيادة {وكيل_الكلية}\nتحية طيبة وبعد،\n\n🔔 ملخص المواعيد القريبة والمتأخرة للباحثين ({عدد_المواعيد} موعد):\n{قائمة_المواعيد}\n\nوتفضلوا بقبول فائق الاحترام.'},
+{id:'d_x1',k:'reason',to:'r',t:'عدم الالتزام بالمقابلات الإشرافية',b:'عدم الالتزام بالمقابلات الإشرافية'},
+{id:'d_x2',k:'reason',to:'r',t:'التأخر في تسليم المهام',b:'التأخر في تسليم المهام المطلوبة'},
+{id:'d_x3',k:'reason',to:'r',t:'عدم تقديم التقرير الدوري',b:'عدم تقديم ما يلزم لإعداد التقرير الدوري'},
+{id:'d_x4',k:'reason',to:'r',t:'الانقطاع عن المتابعة',b:'الانقطاع عن المتابعة والتواصل مع المشرف'}];
+G.defaults=()=>DEF.map(x=>({...x}));
+G.setTpls=a=>{G._t=Array.isArray(a)&&a.length?a.map(x=>({id:x.id,k:x.k||'warn',to:x.to||'r',t:x.t||'',b:x.b||''})):null};
+G.all=()=>G._t||G.defaults();
+G.list=(k,to)=>G.all().filter(t=>t.k===k&&(!to||t.to===to));
+G.byId=id=>G.all().find(t=>t.id===id);
+
+/* ---------- المحرّك ---------- */
+G.render=(b,c)=>String(b||'').replace(/\{([^{}\n]{1,40})\}/g,(m,n)=>{n=nm(n);if(!(n in c))return m;const v=c[n];return v==null?'':v});
+G.fields=b=>{const o=[];String(b||'').replace(/\{([^{}\n]{1,40})\}/g,(m,n)=>{n=nm(n);if(!KN.has(n)&&!o.includes(n))o.push(n);return m});return o};
+G.ord=n=>'الإنذار '+(['','الأول','الثاني','الثالث','الرابع','الخامس','السادس','السابع','الثامن','التاسع','العاشر'][n]||('رقم '+n));
+G.lbl=k=>k<0?'متأخر '+(-k)+' يوم':k==0?'اليوم':'بعد '+k+' يوم';
+G.wa=(phone,text)=>{let n=String(phone||'').replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/\D/g,'');if(n.startsWith('00'))n=n.slice(2);
+ if(/^0\d{10}$/.test(n))n='2'+n;else if(/^1\d{9}$/.test(n))n='20'+n;
+ const t=text?'?text='+encodeURIComponent(text):'';return n.length>=9?'https://wa.me/'+n+t:'https://wa.me/'+t};
+G.ctx=o=>{const r=o.r||{},w=o.w||{},ss=(o.sups||[]).map(s=>s.n||s).filter(Boolean),dl=(o.dues||[]).slice().sort((a,b)=>a.k-b.k),f=dl[0]||{};
+ const c={الباحث:r.name||'',الدرجة:r.degree||'',القسم:r.dept||'',التخصص:r.specialty||'',المشرف:o.sup||ss.join(' و '),المشرفون:ss.join(' ، '),وكيل_الكلية:o.vd||'',الكلية:o.faculty||'',الجامعة:o.univ||'',اليوم:fdt(G.host&&G.host.today?G.host.today():''),
+  رقم_الإنذار:w.no?w.no+'/'+w.yr:'(يُحدَّد عند الإصدار)',تاريخ_الإنذار:fdt(w.date),سبب_الإنذار:w.reason||'',ترتيب_الإنذار:w.ord?G.ord(w.ord):'',مصدر_الإنذار:w.src||o.sup||'إدارة الدراسات العليا',
+  قائمة_المواعيد:dl.map(a=>'• '+(o.names?a.n+' — ':'')+a.t.replace(/\s*\(.*$/,'')+' — '+fdt(a.d)+' ('+G.lbl(a.k)+')').join('\n'),الموعد:f.t?f.t.replace(/\s*\(.*$/,''):'',تاريخ_الموعد:fdt(f.d),المتبقي:f.d?G.lbl(f.k):'',عدد_المواعيد:dl.length};
+ const x=o.x||{};for(const k in x)if(x[k]!==''&&x[k]!=null)c[nm(k)]=x[k];return c};
+G.sample=()=>G.ctx({r:{name:'محمد أحمد علي',degree:'ماجستير',dept:'العلوم النفسية',specialty:'صحة نفسية'},sups:['أ.د/ سامية محمود'],sup:'أ.د/ سامية محمود',vd:'أ.د/ هناء فؤاد',faculty:'التربية للطفولة المبكرة',univ:'جامعة بني سويف',w:{no:5,yr:2026,date:'2026-11-14',reason:'عدم الالتزام بالمقابلات الإشرافية',ord:2},names:true,dues:[{n:'محمد أحمد علي',t:'انتهاء القيد',d:'2026-12-01',k:17},{n:'محمد أحمد علي',t:'تقرير الإشراف الدوري',d:'2026-11-10',k:-4}]});
+
+/* ---------- معالج الإرسال بالتتابع (واتساب) ---------- */
+G.queue=function(o){const H=G.host,items=o.items.map(x=>({...x,sent:false}));let cur=0;
+ const nxt=()=>{const i=items.findIndex((x,j)=>!x.sent&&j!==cur);return i<0?items.findIndex(x=>!x.sent):i};
+ const draw=()=>{const box=q('#gxq');if(!box)return;const it=items[cur],left=items.filter(x=>!x.sent).length;
+  if(!left){box.innerHTML=`<div class=gx-done><b>✅ تم تجهيز وإرسال كل الرسائل (${items.length})</b><button class="btn" onclick="GSX.host.hide()">إغلاق</button></div>`;o.onDone&&o.onDone();return}
+  box.innerHTML=`<div class=gx-steps>${items.map((x,i)=>`<button type=button data-i="${i}" class="gx-st ${i==cur?'on':''} ${x.sent?'ok':''}"><i>${x.sent?'✓':i+1}</i><span>${E(x.role)}</span></button>`).join('')}</div>
+<div class=gx-to><div><b>${E(it.name||'—')}</b><span class=gx-role>${E(it.role)}</span></div><small>${it.phone?'<bdi>'+E(it.phone)+'</bdi>':'⚠ لا يوجد رقم محفوظ — سيفتح واتساب لتختار جهة الاتصال بنفسك'}</small></div>
+<textarea id=gxqt rows=11 spellcheck=false>${E(it.text)}</textarea>
+<div class=gx-act><a class=btn id=gxqs target=_blank rel=noopener href="${E(G.wa(it.phone,it.text))}">${icn('wa')}${it.sent?'إعادة الإرسال':'إرسال عبر واتساب'}</a><button type=button class="btn w" id=gxqc>نسخ النص</button>${items.length>1?'<button type=button class="btn w" id=gxqn>التالي ◂</button>':''}</div>
+<p class=gx-hint>يمكنك تعديل النص قبل الإرسال. بعد الضغط على «إرسال» يفتح واتساب والرسالة جاهزة — اضغط إرسال هناك ثم ارجع هنا، وسننتقل تلقائياً للرسالة التالية (${left} متبقية).</p>`;
+  const t=q('#gxqt'),a=q('#gxqs');t.oninput=()=>{it.text=t.value;a.href=G.wa(it.phone,it.text)};
+  a.onclick=()=>{it.sent=true;o.onSent&&o.onSent(it);setTimeout(()=>{const n=nxt();if(n>=0)cur=n;draw()},500)};
+  q('#gxqc').onclick=function(){const b=this;(navigator.clipboard?navigator.clipboard.writeText(t.value):Promise.reject()).then(()=>{b.textContent='تم النسخ ✓'},()=>{t.select();document.execCommand&&document.execCommand('copy');b.textContent='تم النسخ ✓'});setTimeout(()=>{b.textContent='نسخ النص'},1500)};
+  const n=q('#gxqn');n&&(n.onclick=()=>{cur=(cur+1)%items.length;draw()});
+  box.querySelectorAll('.gx-st').forEach(b=>b.onclick=()=>{cur=+b.dataset.i;draw()})};
+ H.show(o.title||'إرسال عبر واتساب',o.sub||'',`<div id=gxq class=gx></div>`,'');draw()};
+
+/* ---------- بطاقة إنذار ---------- */
+G.wcard=(w,o)=>{o=o||{};const s=w.sent||{},ch=(k,t)=>s[k]?`<span class="chip">${t} ✓ ${E(String(s[k]).slice(5,16))}</span>`:`<span class="chip p">${t}: لم يُرسل</span>`;
+ return `<div class=gx-wc><div class=gx-wh><b>إنذار رقم ${w.no}/${w.yr}</b><span class="chip z">${E(G.ord(w.ord))}</span><span class=gx-d>${fdt(w.date)}</span></div>${o.head?`<div class=gx-wm>${o.head}</div>`:''}<p>${E(w.reason)}</p><div class=gx-ws>${ch('r','الباحث')}${ch('v','وكيل الكلية')}</div>${o.actions?`<div class=gx-wa>${o.actions}</div>`:''}</div>`};
+
+/* ---------- نافذة الإنذار (إصدار جديد أو إعادة إرسال) ---------- */
+G.warn=function(o){const H=G.host,r=o.r||{},rs=o.mode==='resend',W0=o.w||{},T=H.today();let XV={};try{XV=JSON.parse(W0.x||'{}')||{}}catch(e){}
+ const rows=[{k:'r',role:'الباحث',name:r.name,phone:r.phone},{k:'v',role:'وكيل الكلية',name:o.vd||'وكيل الكلية',phone:o.vdPhone}];
+ rows.forEach(x=>{x.l=G.list('warn',x.k)});
+ const reasons=G.list('reason');
+ const sel=()=>rows.map(x=>({...x,on:!!(q('#gxc_'+x.k)&&q('#gxc_'+x.k).checked),tpl:G.byId((q('#gxs_'+x.k)||{}).value)})).filter(x=>x.on&&x.tpl);
+ const W=()=>rs?W0:{no:0,yr:0,date:(q('#gxw_d')||{}).value||T,reason:((q('#gxw_r')||{}).value||'').trim(),ord:(o.prior||[]).length+1};
+ const cx=()=>G.ctx({r,sups:o.sups,sup:o.sup,vd:o.vd,faculty:o.faculty,univ:o.univ,w:{...W(),src:rs?(o.src||o.sup):o.sup},x:XV});
+ const flds=()=>{const s=[];sel().forEach(x=>G.fields(x.tpl.b).forEach(n=>{if(!s.includes(n))s.push(n)}));return s};
+ const drawX=()=>{const f=flds(),b=q('#gxw_x');if(!b)return;b.innerHTML=f.length?`<div class=gx-f><label>حقول إضافية يطلبها النموذج</label>${f.map(n=>`<input data-x="${E(n)}" placeholder="${E(n.replace(/_/g,' '))}" value="${E(XV[n]||'')}">`).join('')}</div>`:'';
+  b.querySelectorAll('input').forEach(i=>i.oninput=()=>{XV[i.dataset.x]=i.value.trim();pv()})};
+ const pv=()=>{const c=cx(),b=q('#gxw_pv');if(!b)return;const l=sel();b.innerHTML=l.length?l.map(x=>`<div class=gx-pv><b>معاينة — ${E(x.role)}</b><pre>${E(G.render(x.tpl.b,c))}</pre></div>`).join(''):'<div class=em>اختر مستلماً واحداً على الأقل</div>'};
+ const body=`<div class=gx>${rs?`<div class=gx-num>إنذار رقم <b>${W0.no}/${W0.yr}</b> بتاريخ ${fdt(W0.date)} — ${E(G.ord(W0.ord))}<p>${E(W0.reason)}</p></div>`:`<div class=gx-row><div><label>تاريخ الإنذار</label><input type=date id=gxw_d value="${T}"></div><div><label>رقم الإنذار</label><input value="يُولَّد تلقائياً عند الإصدار" disabled></div></div>
+<label>سبب الإنذار</label>${reasons.length?`<div class=gx-chips>${reasons.map(x=>`<button type=button data-b="${E(x.b)}">${E(x.t)}</button>`).join('')}</div>`:''}<textarea id=gxw_r rows=3 placeholder="اكتب سبب الإنذار بوضوح…"></textarea>${(o.prior||[]).length?`<p class=gx-hint>سبق توجيه ${(o.prior||[]).length} إنذار لهذا الباحث — هذا سيكون <b>${E(G.ord((o.prior||[]).length+1))}</b>.</p>`:''}`}
+<label style="margin-top:14px">إرسال عبر واتساب إلى</label>
+${rows.map(x=>`<div class=gx-rc><label class=gx-ck><input type=checkbox id=gxc_${x.k} ${x.l.length?'checked':'disabled'}><span>${x.role}: <b>${E(x.name||'—')}</b>${x.phone?'':' <small class=gx-w>(لا يوجد رقم — ستختار جهة الاتصال)</small>'}</span></label>${x.l.length?`<select id=gxs_${x.k}>${x.l.map(t=>`<option value="${E(t.id)}">${E(t.t)}</option>`).join('')}</select>`:'<small>لا يوجد نموذج — أضف من «النماذج»</small>'}</div>`).join('')}
+<div id=gxw_x></div><div id=gxw_pv></div></div>`;
+ H.show(rs?'إعادة إرسال إنذار':'توجيه إنذار',E(r.name||''),body,`<button class=btn id=gxw_go>${icn('wa')}${rs?'متابعة الإرسال':'إصدار الإنذار وإرساله'}</button><button class="btn w" onclick="GSX.host.hide()">إلغاء</button>`);
+ const root=q('.gx');if(!root)return;
+ root.addEventListener('input',pv);root.addEventListener('change',e=>{if(/^gx[cs]_/.test(e.target.id||'')){drawX();pv()}});
+ root.querySelectorAll('.gx-chips button').forEach(b=>b.onclick=()=>{const t=q('#gxw_r');t.value=t.value.trim()?t.value.trim().replace(/[؛.]$/,'')+'؛ '+b.dataset.b:b.dataset.b;pv();t.focus()});
+ drawX();pv();
+ q('#gxw_go').onclick=async function(){const btn=this,l=sel(),w=W();
+  if(!rs){if(!w.reason)return H.toast('اكتب سبب الإنذار');if(!/^\d{4}-\d{2}-\d{2}$/.test(w.date))return H.toast('تاريخ غير صالح')}
+  if(!l.length)return H.toast('اختر مستلماً واحداً على الأقل');
+  const miss=flds().find(n=>!XV[n]);if(miss)return H.toast('أكمل الحقل: '+miss.replace(/_/g,' '));
+  let F=W0;if(!rs){btn.classList.add('ld');try{F=await o.save({reason:w.reason,date:w.date,x:XV})}catch(e){btn.classList.remove('ld');return H.toast(e.message||'تعذّر الإصدار')}btn.classList.remove('ld');F.src=o.sup;o.saved&&o.saved(F)}
+  const c=G.ctx({r,sups:o.sups,sup:o.sup,vd:o.vd,faculty:o.faculty,univ:o.univ,w:{...F,src:rs?(o.src||o.sup):o.sup},x:XV});
+  G.queue({title:'إرسال الإنذار',sub:'إنذار رقم '+F.no+'/'+F.yr+' — '+E(r.name||''),items:l.map(x=>({key:x.k,role:x.role,name:x.name,phone:x.phone,text:G.render(x.tpl.b,c)})),onSent:it=>o.sent&&o.sent(F,it.key)})}};
+})();
+
+</script>
+<script>
+/* ===== توجيه الإنذارات من بوابة المشرف ===== */
+var WN={},TPLS=[];
+GSX.host={today:()=>iso(today()),hide:()=>cl(),toast:m=>toast(m),
+ show(title,sub,body,foot){ov(`<div class=sheet><div class=sh1 style="--kc:var(--r)"><i>${ic('warn')}</i><div><b>${title}</b><small>${sub||''}</small></div><button class=ib onclick=cl() aria-label="إغلاق">${ic('x')}</button></div><div class=shb>${body}</div>${foot?`<div class=sht>${foot}</div>`:''}</div>`)}};
+function warnCard(id){if(WN[id]===undefined){WN[id]=null;api('sup_warns',{rid:id}).then(j=>{WN[id]=j.warnings||[];route(1)}).catch(()=>{WN[id]=[]})}
+ const l=WN[id];
+ return `<div class=cd><div class=ch3>${ic('warn')}الإنذارات${l&&l.length?`<b style="margin-inline-start:auto;font:700 20px var(--fd);color:var(--r)">${l.length}</b>`:''}</div>${l===null?`<div class=em>جارٍ التحميل…</div>`:l.length?l.map(w=>GSX.wcard(w,{head:w.sid==ME.id?'':'وجّهه أحد مشرفي الباحث',actions:w.sid==ME.id?`<button class="btn sm g" onclick="warnResend('${esc(id)}','${esc(w.id)}')">${ic('wa')}إعادة إرسال</button>`:''})).join(''):`<div class=em>${ic('check')}لا توجد إنذارات لهذا الباحث</div>`}</div>`}
+function warnCtx(r){return{r,sups:r.supervisors,sup:ME.name,faculty:S.faculty,univ:S.univ,vd:S.vd,vdPhone:S.vdPhone}}
+function warnSentFn(id){return(W,k)=>{api('sup_warnsent',{rid:id,id:W.id,k}).catch(()=>{});(W.sent=W.sent||{})[k]=GSX.host.today()}}
+function warnOpen(id){const r=rid(id);if(!r)return;if(!can('warn'))return toast('توجيه الإنذارات غير متاح حالياً');
+ const run=pr=>GSX.warn({...warnCtx(r),mode:'new',prior:pr,save:async d=>(await api('sup_warn',{rid:id,...d})).w,saved:W=>{(WN[id]=WN[id]||[]).unshift(W);route(1)},sent:warnSentFn(id)});
+ if(Array.isArray(WN[id]))run(WN[id]);else api('sup_warns',{rid:id}).then(j=>{WN[id]=j.warnings||[];run(WN[id])}).catch(e=>toast(e.message))}
+function warnResend(id,wid){const r=rid(id),w=(WN[id]||[]).find(x=>x.id==wid);if(!r||!w)return;GSX.warn({...warnCtx(r),mode:'resend',w,src:w.sid==ME.id?ME.name:'أحد مشرفي الباحث',prior:[],sent:warnSentFn(id)})}
+
+</script>
+</body></html>
